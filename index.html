@@ -4,7 +4,68 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Play Tic Tac Toe Game and have fun</title>
   </head>
-  <body></body>
+  <body>
+    <div class="game-box">
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <h1 class="ta-center">Game Board</h1>
+            <table style="height: 250px; width: 50%">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-4">
+            <h2>Players Choice</h2>
+            <div class="icon">
+              <div class="cross">
+                <p class="icon-text">
+                  <button
+                    id="icon-choice-multiply"
+                    type="submit"
+                    name="multiply-icon"
+                    class="icon-button"
+                    value="X"
+                    onclick="valueCross()"
+                  >
+                    X
+                  </button>
+                </p>
+                <p class="icon-text">
+                  <button
+                    id="icon-choice-zero"
+                    type="submit"
+                    name="icon-zero"
+                    value="0"
+                    class="icon-button"
+                    onclick="valueZero()"
+                  >
+                    0
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="ta-center">@Copyright Bishal GC</p>
+  </body>
+  <script src="index.js"></script>
 </html>

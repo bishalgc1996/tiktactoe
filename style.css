@@ -1,0 +1,51 @@
+/*  
+* Style for our game
+*/
+body {
+  background-color: aliceblue;
+  padding: 2rem;
+  border: 5px solid rgb(160, 86, 86);
+}
+
+.container {
+  max-width: 100%;
+  height: auto;
+}
+
+.row {
+  margin: 8% 0;
+}
+
+.col-8 {
+  width: 75%;
+  height: auto;
+  display: inline-block;
+}
+.col-4 {
+  width: 25%;
+  display: inline;
+  float: right;
+}
+
+.icon-text {
+  font-size: 60px;
+}
+
+button.icon-button {
+  width: 25%;
+  height: 65px;
+}
+table {
+  margin: 10% auto;
+}
+
+table,
+th,
+td {
+  border: 4px dotted black;
+  border-collapse: collapse;
+}
+/*  utility classes    */
+.ta-center {
+  text-align: center;
+}
