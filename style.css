@@ -44,8 +44,16 @@ th,
 td {
   border: 4px dotted black;
   border-collapse: collapse;
+  cursor: pointer;
 }
 /*  utility classes    */
 .ta-center {
   text-align: center;
+}
+
+.first-row td {
+  width: 30%;
+  height: 30%;
+  text-align: center;
+  font-size: 2rem;
 }
