@@ -11,17 +11,32 @@ class Player {
 
   changeboxValue() {
     console.log(`Value ${this.valueButton}`);
-    let selectedBox = document.querySelector(".first-row td");
-    console.log(typeof selectedBox);
-    console.log(selectedBox.innerText);
+   
+    let clickedBox = document.getElementById('gb-tl');
 
-    if (selectedBox.innerText != "") {
-      console.log("Not Empty");
-      let selectedBox = document.querySelector(".second-row td");
-      selectedBox.innerText = this.valueButton;
-    } else {
-      selectedBox.innerText = this.valueButton;
-    }
+    console.log(typeof clickedBox)
+ //   console.log(clickedBox)
+
+    clickedBox.addEventListener('click' ,({ target }) => {
+
+      const currentRow = target.closest('tr');
+      const rowNum = currentRow.dataset.id;
+
+      const currentBox  = target.closest('td')
+    //  console.log(currentBox.innerText)
+
+    currentBox.innerText  = this.valueButton
+  
+   //   console.clear();
+      console.log('rowNum: ', rowNum);
+    })
+
+    
+
+    
+  
+
+  
   }
 }
 
