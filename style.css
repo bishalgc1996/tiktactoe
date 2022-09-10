@@ -1,6 +1,14 @@
 /*  
 * Style for our game
 */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 body {
   background-color: aliceblue;
   padding: 2rem;
@@ -44,8 +52,16 @@ th,
 td {
   border: 4px dotted black;
   border-collapse: collapse;
+  cursor: pointer;
 }
 /*  utility classes    */
 .ta-center {
   text-align: center;
+}
+
+.first-row , .second-row td {
+  width: 30%;
+  height: 30%;
+  text-align: center;
+  font-size: 2rem;
 }
