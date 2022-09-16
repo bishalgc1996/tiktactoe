@@ -12,6 +12,7 @@ class Player {
   changeboxValue() {
     console.log(`Value ${this.valueButton}`);
 
+
     let clickedBox = document.getElementById("gb-tl");
 
     console.log(typeof clickedBox);
@@ -47,6 +48,17 @@ class Player {
       //   console.clear();
       console.log("rowNum: ", rowNum);
     });
+
+   
+   
+
+    
+
+    
+  
+
+  
+
   }
 }
 
@@ -60,28 +72,37 @@ console.log(zeroButton.innerText);
 
 window.addEventListener("DOMContentLoaded", (event) => {
   if (crossButton.innerText === "X") getdomValue(crossButton.innerText);
-  // if (crossbuttonCom.innerText === "X") getdomValue(crossbuttonCom.innerText);
+  if (crossbuttonCom.innerText === "X") getdomValue(crossbuttonCom.innerText);
   if (zeroButton.innerText === "0") getdomValue(zeroButton.innerText);
-  // if (zerobuttonCom.innerText === "0") getdomValue(zerobuttonCom.innerText);
+  if (zerobuttonCom.innerText === "0") getdomValue(zerobuttonCom.innerText);
 
   function getdomValue(buttonValue) {
     if (buttonValue === "X") {
       const playerOne = new Player(buttonValue);
       crossButton.addEventListener("click", function () {
         playerOne.changeboxValue();
+
         crossButton.style.backgroundColor = "#00b451";
         zeroButton.style.backgroundColor = "#955f5f";
         zeroButton.style.display = "none";
         crossbuttonCom.style.display = "none";
+
+        crossButton.style.backgroundColor = '#00b451';
+        zeroButton.style.display = 'none';
+        crossbuttonCom.style.display  = 'none'
+
       });
     } else {
       const playerTwo = new Player(buttonValue);
       zeroButton.addEventListener("click", function () {
         playerTwo.changeboxValue();
+
         zeroButton.style.backgroundColor = "#955f5f";
         crossButton.style.backgroundColor = "#00b451";
         crossButton.style.display = "none";
         zerobuttonCom.style.display = "none";
+
+    
       });
     }
   }
